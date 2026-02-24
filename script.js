@@ -1,3 +1,4 @@
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
 const panels = document.querySelectorAll(".panel");
 const dots = document.querySelectorAll(".dots span");
 let current = 0;
@@ -45,7 +46,17 @@ dots.forEach((dot, i) => {
   dot.addEventListener("click", () => goTo(i));
 
 });
-/* Disable scroll hijack on touch devices */
-if ("ontouchstart" in window) {
-  window.removeEventListener("wheel", () => {});
+if (!isMobile) {
+
+  window.addEventListener("wheel", e => {
+    if (e.deltaY > 0) goTo(current + 1);
+    else goTo(current - 1);
+  });
+
+  window.addEventListener("keydown", e => {
+    if (e.key === "ArrowDown") goTo(current + 1);
+    if (e.key === "ArrowUp") goTo(current - 1);
+  });
+
 }
+
