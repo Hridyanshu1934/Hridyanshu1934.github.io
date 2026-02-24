@@ -43,4 +43,9 @@ window.addEventListener("keydown", e => {
 /* Dot click */
 dots.forEach((dot, i) => {
   dot.addEventListener("click", () => goTo(i));
+
 });
+/* Disable scroll hijack on touch devices */
+if ("ontouchstart" in window) {
+  window.removeEventListener("wheel", () => {});
+}
