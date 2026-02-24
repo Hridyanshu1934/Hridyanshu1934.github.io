@@ -77,3 +77,4 @@ function handleSwipe() {
     goTo(current - 1);
   }
 }
+
