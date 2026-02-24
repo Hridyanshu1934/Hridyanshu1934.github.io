@@ -206,4 +206,86 @@ html, body {
 /* Highlight your portfolio */
 .project-card.highlight {
   border: 1px solid #6ee7ff;
+
+}
+/* =========================
+   MOBILE RESPONSIVENESS
+   ========================= */
+@media (max-width: 768px) {
+
+  /* Panels */
+  .panel {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  /* Headings */
+  h1 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  /* Hide cursor glow on mobile */
+  .cursor {
+    display: none;
+  }
+
+  /* Dots – make smaller */
+  .dots {
+    right: 10px;
+  }
+
+  .dots span {
+    width: 6px;
+    height: 6px;
+  }
+}
+@media (max-width: 768px) {
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card img {
+    height: 160px;
+  }
+
+  /* Always show overlay hint on mobile */
+  .project-card .overlay {
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.7),
+      rgba(0,0,0,0.2)
+    );
+  }
+
+  .overlay button {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
+}
+@media (max-width: 768px) {
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid a {
+    padding: 18px;
+    font-size: 1rem;
+  }
+
+  .contact-grid a span {
+    font-size: 0.85rem;
+  }
 }
