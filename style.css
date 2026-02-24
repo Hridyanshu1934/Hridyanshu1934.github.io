@@ -289,3 +289,9 @@ html, body {
     font-size: 0.85rem;
   }
 }
+@media (max-width: 768px) {
+  .panel {
+    transition-duration: 0.6s;
+  }
+}
+
